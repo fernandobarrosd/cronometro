@@ -4,32 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cronometro (segundos)</title>
+    <title>Cronometro - (minutos e segundos)</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-   <div class="cronometro">
-    <div class="cronometro-header">
-        <div class="cronometro-header-title">
-            <h1>Cronometro</h1>
+    <div class="cronometro">
+        <div class="cronometro-header">
+            <div class="cronometro-header-title">
+                <h1>Cronometro</h1>
+            </div>
+        </div>
+        <div class="cronometro-body">
+            <div class="cronometro-body-minss">
+                <p>
+                    <span id="minutos">00</span>
+                    :
+                    <span id="segundos">00</span>
+                </p>
+            </div>
+            <div class="cronometro-body-actions">
+                <div id="cronometro-action-iniciar">
+                    <button>Iniciar</button>
+                </div>
+                <div id="cronometro-action-parar">
+                    <button>Parar</button>
+                </div>
+                <div id="cronometro-action-resetar">
+                    <button>Resetar</button>
+                </div>
+            </div>
         </div>
     </div>
-   
-    <div class="cronometro-number">
-        <p>0</p>
-    </div>
-    <div class="cronometro-actions">
-        <div class="cronometro-actions" id="cronometro-actions-iniciar">
-            <button id="btn-iniciar">Inicar</button>
-        </div>
-        <div class="cronometro-actions" id="cronometro-actions-parar">
-            <button id="btn-iniciar">Parar</button>
-        </div>
-    </div>
-    <div class="cronometro-footer">
-
-    </div>
-   </div>
-   <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

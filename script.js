@@ -18,7 +18,7 @@ btnIniciar.addEventListener("click", () => {
             setCount(minutos, countM);
         }
         countS ++;
-    }, 300);
+    });
 });
 
 

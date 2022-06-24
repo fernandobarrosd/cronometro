@@ -39,7 +39,7 @@ body {
     gap: 30px;
 }
 
-.cronometro-body-actions > div > button {
+.action-button{
     padding: 15px;
     border: none;
     background-color: gray;
@@ -49,7 +49,7 @@ body {
     cursor: pointer;
 }
 
-.cronometro-body-actions > div > button:hover {
+.action-button:hover {
     transition: 0.5s all;
     background-color: rgb(218, 200, 200);
 }

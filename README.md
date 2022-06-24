@@ -1,2 +1,2 @@
 # cronometro
-Segunda versão do cronometro
+Terceira versão do cronometro

@@ -8,6 +8,8 @@ let countM = 0;
 let interval = null;
 
 
+
+
 btnIniciar.addEventListener("click", () => {
     interval = setInterval(() => {
         setCount(segundos, countS);
@@ -31,6 +33,10 @@ function countReset() {
     segundos.textContent = "00";
     minutos.textContent = "00";
 }
+
+
+
+
 
 function setMinutesSeconds() {
     countS = 0;

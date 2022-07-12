@@ -8,38 +8,71 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="cronometro">
-        <div class="cronometro-header">
-            <div class="cronometro-header-title">
-                <h1>Cronometro</h1>
-            </div>
-        </div>
-        <div class="cronometro-body">
-            <div class="cronometro-body-minss">
-                <p>
-                    <span id="minutes">00</span>
-                    :
-                    <span id="seconds">00</span>
-                </p>
-            </div>
-            <div class="cronometro-body-actions">
-                <div id="cronometro-action-iniciar">
-                    <button
-                    class="action-button">Iniciar</button>
+    <div id="app">
+        <div class="cronometro">
+            <div class="cronometro-header">
+                <div class="cronometro-header-title">
+                    <h1>Cronometro</h1>
                 </div>
-                <div id="cronometro-action-parar">
-                    <button class="action-button">Parar</button>
+            </div>
+            <div class="cronometro-body">
+                <div class="cronometro-body-minss">
+                    <p>
+                        <span id="minutes">{{minutos}}</span>
+                        :
+                        <span id="seconds">{{segundos}}</span>
+                    </p>
                 </div>
-                <div id="cronometro-action-resetar">
-                    <button class="action-button"><span class="marked">Resetar</span></button>
+                <div class="cronometro-body-actions">
+                    <div id="cronometro-action-iniciar">
+                        <button
+                        class="action-button"
+                        v-on:click="start">Iniciar</button>
+                    </div>
+                    <div id="cronometro-action-parar">
+                        <button class="action-button">Parar</button>
+                    </div>
+                    <div id="cronometro-action-resetar">
+                        <button class="action-button">
+                            Resetar
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="./jquery-3.6.0.js" type="text/js"></script>
-    <script src="./script.js" type="text/js"></script>
+   
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
     <script>
-        
+        const cronometro = new Vue({
+            el: "#app",
+            data: {
+                minutos: "00",
+                segundos: "00",
+                countS: 0,
+                countM: 0,
+                interval: null
+            },
+            methods: {
+                start() {
+                    this.interval = setInterval(() => {
+                        
+
+                    }, 2000)
+                },
+
+                stop() {
+
+                },
+                reset() {
+
+                },
+
+              
+                
+            }
+        })
     </script>
+   
 </body>
 </html>

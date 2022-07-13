@@ -18,11 +18,16 @@
             <div class="cronometro-body">
                 <div class="cronometro-body-minss">
                     <p>
-                        <span id="minutes">{{minutos}}</span>
+                        <span v-if="countM < 10">0{{countM}}</span>
+                        <span v-else>{{countM}}</span>
                         :
-                        <span id="seconds">{{segundos}}</span>
+                        <span v-if="countS < 10">0{{countS}}</span>
+                        <span v-else>{{countS}}</span>
                     </p>
+                    
+                    
                 </div>
+            </div>
                 <div class="cronometro-body-actions">
                     <div id="cronometro-action-iniciar">
                         <button
@@ -43,36 +48,7 @@
     </div>
    
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
-    <script>
-        const cronometro = new Vue({
-            el: "#app",
-            data: {
-                minutos: "00",
-                segundos: "00",
-                countS: 0,
-                countM: 0,
-                interval: null
-            },
-            methods: {
-                start() {
-                    this.interval = setInterval(() => {
-                        
-
-                    }, 2000)
-                },
-
-                stop() {
-
-                },
-                reset() {
-
-                },
-
-              
-                
-            }
-        })
-    </script>
+    <script src="./script.js"></script>
    
 </body>
 </html>
